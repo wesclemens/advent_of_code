@@ -18,9 +18,10 @@ print(tot)
 
 # Simple
 last = None
+tot = 0
 for number in open("input.txt"):
     number = int(number.strip())
-    if not last and last < number:
+    if last and last < number:
         tot += 1
     last = number
 print(tot)
